@@ -30,7 +30,7 @@
 			<list>
 				<bean
 					class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-					<property name="prefix" value="/" />
+					<property name="prefix" value="/WEB-INF/jsp/" />
 					<property name="suffix" value=".jsp" />
 				</bean>
 			</list>
@@ -40,7 +40,7 @@
 	<!-- 配置interceptors拦截器 ，拦截非法进入 前缀都要加上/sys/ -->
 	<mvc:interceptors>
 		<mvc:interceptor>
-			<mvc:mapping path="/sys/**" />
+			<mvc:mapping path="/dev/sys/**" />
 			<bean class="cn.appsys.interceptor.SysInterceptor" />
 		</mvc:interceptor>
 	</mvc:interceptors>
