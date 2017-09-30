@@ -16,7 +16,9 @@ public class DevUserController {
 	private Logger logger=Logger.getLogger(DevUserController.class);
 	@RequestMapping(value="login")
 	public String login() {
-		logger.debug("++++++++login++登陆++++");
+		logger.debug("++++++developer+APP开发者平台+login++页面展示++++");
 		return "devlogin";		
 	}
+	//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 }
