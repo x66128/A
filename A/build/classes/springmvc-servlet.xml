@@ -8,7 +8,8 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/mvc
-        http://www.springframework.org/schema/mvc/spring-mvc.xsd ">
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd  
+        ">
 	<!-- 扫描controller -->
 	<context:component-scan base-package="cn.appsys.controller" />
 	<!-- mvc配置静态文件 -->
@@ -37,10 +38,10 @@
 		</property>
 	</bean>
 	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-	<!-- 配置interceptors拦截器 ，拦截非法进入 前缀都要加上/sys/ -->
+	<!-- 配置interceptors拦截器 ，拦截非法进入 前缀都要加上/dev/flatform/**/ -->
 	<mvc:interceptors>
 		<mvc:interceptor>
-			<mvc:mapping path="/dev/sys/**" />
+			<mvc:mapping path="/dev/flatform/**" />
 			<bean class="cn.appsys.interceptor.SysInterceptor" />
 		</mvc:interceptor>
 	</mvc:interceptors>
